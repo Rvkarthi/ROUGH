@@ -772,6 +772,18 @@
     
    displayHero()
 
+   document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll(".nav-link"); // Select all nav links
+      const navbarCollapse = document.getElementById("navbarNav"); // Navbar collapse element
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: true });
+          bsCollapse.hide(); // Close the navbar
+        });
+      });
+    });
+
     function updateCountdown(targetDate) {
       const now = new Date();
       const remainingTime = new Date(targetDate) - now;
