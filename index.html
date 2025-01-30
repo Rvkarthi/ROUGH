@@ -20,10 +20,125 @@
       }
 
       :root {
-        --primary: rgb(255, 255, 255);
+        --primary: #142b82;
       }
 
-    
+      body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+      footer{
+        bottom: 0px;
+        background-image: linear-gradient(#ffffff,#000459);
+        background-position: center;
+        margin-top: auto;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:hover p{
+          color: white !important;
+        }
+      }
+
+      footer .animated-button {
+      color: #fff;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 16px 36px;
+      border: 4px solid;
+      border-color: transparent;
+      font-size: 16px;
+      background-color: inherit;
+      border-radius: 100px;
+      font-weight: 600;
+      box-shadow: 0 0 0 2px #fff;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      filter: drop-shadow(0px 0px 30px rgb(255, 255, 255));
+    }
+
+    .animated-button svg {
+      position: absolute;
+      width: 24px;
+      fill: #fff;
+      z-index: 9;
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button .arr-1 {
+      right: 16px;
+    }
+
+    .animated-button .arr-2 {
+      left: -25%;
+    }
+
+    .animated-button .circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      background-color: #142b82;
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button .text {
+      color: white;
+      position: relative;
+      z-index: 1;
+      transform: translateX(-12px);
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button:hover {
+      box-shadow: 0 0 0 12px transparent;
+      border-radius: 12px;
+    }
+
+    .animated-button:hover .arr-1 {
+      right: -25%;
+      color: white;
+    }
+
+    .animated-button:hover .arr-2 {
+      color: white;
+      left: 16px;
+    }
+
+    .animated-button:hover .text {
+      transform: translateX(12px);
+      color: white;
+    }
+
+    .animated-button:hover svg {
+      fill: #f7f7f7;
+    }
+
+    .animated-button:active {
+      scale: 0.95;
+      box-shadow: 0 0 0 4px #142b82;
+    }
+
+    .animated-button:hover .circle {
+      width: 220px;
+      height: 220px;
+      opacity: 1;
+    }
+
+
 
       @keyframes float {
         0%,
@@ -58,7 +173,7 @@
 
 /* Countdown box styles */
 .countdown-box {
-  border: 2px solid #0d7aff;
+  border: 2px solid var(--primary);
   border-radius: 8px;
   padding: 10px;
   margin: 5px;
@@ -71,7 +186,7 @@
 .countdown-time {
   font-size: 2rem;
   font-weight: bold;
-  color: #0d7aff;
+  color: var(--primary);
 }
 
 /* Countdown labels (Days, Hours, etc.) */
@@ -129,10 +244,10 @@
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
-        height: 95vh;
-        height: 95dvh;
-        height: 95svh;
-        height: 95lvh;
+        height: 100vh;
+        height: 100dvh; 
+        height: 100svh;
+        height: 100lvh;
         display: flex;
         flex-direction: column;
         
@@ -144,12 +259,20 @@
         color: white;
       }
 
+      .box {
+            border: 2px solid #000;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .department-box {
+            margin-bottom: 30px;
+        }
+        .strong-text {
+            font-weight: bold;
+        }
     
-
-
-
-
-      
     </style>
   </head>
 
@@ -174,31 +297,31 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <button class="nav-link" onclick="displayHero()">Home</button>
+              <button class="nav-link float-end mx-5 mt-3" onclick="displayHero()">Home</button>
             </li>
             <li class="nav-item">
-              <button class="nav-link" onclick="displayConference()">Conference</button>
+              <button class="nav-link float-end mx-5" onclick="displayConference()">Conference</button>
             </li>
             <li class="nav-item">
-              <button class="nav-link" onclick="displayChief()">Organizing Committee</button>
+              <button class="nav-link float-end mx-5" onclick="displayChief()">Organizing Committee</button>
             </li>
             <li class="nav-item">
-              <button class="nav-link" onclick="displayCallforpapers()">Call for Papers</button>
+              <button class="nav-link float-end mx-5" onclick="displayCallforpapers()">Call for Papers</button>
             </li>
             <li class="nav-item">
-              <button class="nav-link" onclick="displayImpDates()">Important Dates</button>
+              <button class="nav-link float-end mx-5" onclick="displayImpDates()">Important Dates</button>
             </li>
             <li class="nav-item">
-              <button class="nav-link" onclick="displayRegister()">Registration Details</button>
+              <button class="nav-link float-end mx-5" onclick="displayRegister()">Registration Details</button>
             </li>
             <li class="nav-item">
-              <button class="nav-link" onclick="displayTarget()">Target Audience</button>
+              <button class="nav-link float-end mx-5" onclick="displayTarget()">Target Audience</button>
             </li>
             <li class="nav-item">
-              <button class="nav-link" onclick="displayPublication()">Publication Details</button>
+              <button class="nav-link float-end mx-5" onclick="displayPublication()">Publication Details</button>
             </li>
             <li class="nav-item">
-              <button class="nav-link" onclick="displayCollege()">About College</button>
+              <button class="nav-link float-end mx-5" onclick="displayCollege()">About College</button>
             </li>
           </ul>
         </div>
@@ -212,15 +335,16 @@
         <div class="row">
           <div class="col-12 my-5">
             <h1 class="text-white w3-animate-top" style="text-transform: uppercase;">
-              <p  style="text-transform: none; font-size: 70%; font-weight: 900 !important;">International&nbsp;Conference&nbsp;on</p> Innovative Research in Engineering and
-              Technology <br>(ICIRET-2025) <sub><p style="font-size: 15px !important; margin-top: 5px;">(Hybrid Mode)</p></sub>
+              <p  style="text-transform: none; font-size: 70%; font-weight: 900 !important;">International&nbsp;Conference&nbsp;on</p>
+              (ICIRET-2025) <br> Innovative Research in Engineering and
+              Technology <br> <sub><p style="font-size: 15px !important; margin-top: 5px;">(Hybrid Mode)</p></sub>
               <p style="font-size: smaller !important; margin-top: 10px;">28<sup>th</sup> March 2025</p>
               <br />
             </h1>
             
           </div>
           <div
-            class="col-12 mt-5 pt-5 d-flex justify-content-center align-items-center"
+            class="col-12 mt-5 py-5 d-flex justify-content-center align-items-center"
             style="flex-direction: column"
           >
             <a id="floating-btn"
@@ -228,11 +352,12 @@
               href="https://forms.gle/Zvq7zqRwu6Tcv5hS7"
               >Register now
             </a>
-            <br />
+            <br /> 
+            <!-- add brochure link here -->
             <a
               download="BROCHURE.pdf"
-              href="brochure.jpg"
-              class="btn btn-primary m-3 p-3 rounded-5"
+              href="Brochure.pdf"
+              class="btn btn-primary m-3 mb-5 p-3 rounded-5"
               style="filter: drop-shadow(0px 0px 30px #4e74ffa8);"
             >
               DOWNLOAD BROCHURE 
@@ -244,7 +369,7 @@
 
     <hr />
 
-    <!-- reg-endin -->
+    <!-- reg -->
     <div class="container countdown-container my-5" id="reg-endin">
       <h1 class="countdown-header text-dark">Register Ends In</h1>
       <div class="row justify-content-center">
@@ -265,7 +390,7 @@
           <div class="countdown-label">Sec</div>
         </div>
       </div>
-      <a href="https://forms.gle/Zvq7zqRwu6Tcv5hS7" style="text-decoration: none; color: #ffffff !important; background-color:#0d7aff;" class="mt-4 btn border rounded border-primary">register now -></a>
+      <a href="https://forms.gle/Zvq7zqRwu6Tcv5hS7" style="text-decoration: none; color: #ffffff !important; background-color:var(--primary);" class="mt-4 btn border rounded border-primary">register now -></a>
       <hr />
     </div>
     
@@ -273,20 +398,10 @@
 
     <!--  conference  -->
     <section id="conference" class="w3-animate-top">
-    <h1 class="text-dark mt-5" >Conference</h1>
+    <h1 class="text-dark mt-5" >About the Conference</h1>
     <div class="container bg-primary p-5 mb-5">
       <p class="text-white" style="font-size: medium; text-align: center">
-        RET-2025, the One-Day International Conference on Innovative Research in
-        Engineering and Technology, aims to foster collaboration and knowledge
-        exchange among faculty members, researchers, industry experts, and
-        students by highlighting cutting-edge advancements in engineering. The
-        conference will explore emerging trends, innovative methodologies, and
-        technological breakthroughs across various engineering fields. Conducted
-        in hybrid mode, the event offers both in-person and virtual
-        participation, with an emphasis on encouraging overseas delegates to
-        engage virtually. This format ensures global collaboration and the
-        sharing of diverse perspectives, contributing to the advancement of
-        engineering research and its societal impact.
+        IClRET-2025, the One-Day International Conference on Innovative Research in Engineering and Technology, is dedicated to fostering collaboration and knowledge exchange among faculty members, researchers, industry experts, and students. This conference highlights cutting-edge advancements, explores emerging trends, and showcases innovative methodologies and technological breakthroughs across various engineering domains. IClRET-2025 offers the flexibility of both in-person and virtual participation (hybrid mode - for other states and countries), with a special emphasis on encouraging international delegates to participate virtually. This inclusive format ensures global collaboration, promotes the exchange of diverse perspectives, and contributes significantly to the advancement of engineering research and its societal impact.
       </p>
     </div>
     <hr />
@@ -379,23 +494,23 @@
     <div class="container bg-primary py-5 mb-5 d-flex align-items-center justify-content-center" style="flex-direction: column;">
       <div>
         <ul class="list-group list-group-horizontal">
-          <li class="list-group-item ">Track 1</li>
-          <li class="list-group-item "> LLM, Deep Learning, Generative AI, Machine Learning</li>
+          <li class="list-group-item text-center " width="100%">Track 1</li>
+          <li class="list-group-item text-center " width="100%"> LLM, Deep Learning, Generative AI, Machine Learning</li>
         </ul>
   
         <ul class="list-group list-group-horizontal">
-          <li class="list-group-item ">Track 2</li>
-          <li class="list-group-item "> Emotional Intelligence, Data Analytics, Edge Computing, Predictive Analytics</li>
+          <li class="list-group-item text-center " width="100%">Track 2</li>
+          <li class="list-group-item text-center " width="100%"> Emotional Intelligence, Data Analytics, Edge Computing, Predictive Analytics</li>
         </ul>
   
         <ul class="list-group list-group-horizontal">
-          <li class="list-group-item ">Track 3</li>
-          <li class="list-group-item"> Cybersecurity, Network Security, Ethical Hacking, Blockchain</li>
+          <li class="list-group-item text-center " width="100%">Track 3</li>
+          <li class="list-group-item text-center"> width="100%" Cybersecurity, Network Security, Ethical Hacking, Blockchain</li>
         </ul>
   
         <ul class="list-group list-group-horizontal">
-          <li class="list-group-item ">Track 4</li>
-          <li class="list-group-item"> Internet of Things, Federated Learning, Green IT, Quantum Computing</li>
+          <li class="list-group-item text-center " width="100%">Track 4</li>
+          <li class="list-group-item text-center"> width="100%" Internet of Things, Federated Learning, Green IT, Quantum Computing</li>
         </ul>
       </div>
     </div>
@@ -458,86 +573,89 @@
 
 
     <!-- Organizing Committee -->
-    <div class="container mt-5 w3-animate-top" id="Organizing-Committee">
-      <h1 class="text-center text-primary mb-4">Organizing Committee</h1>
-      
-      <div class="mb-4">
-          <h3 class="text-dark">Chief Patron</h3>
-          <p class="border rounded px-5 py-3">Justice K. Venkataraman, <em>Judge Administrator</em></p>
-      </div>
-
-      <div class="mb-4">
-          <h3 class="text-dark">Patrons</h3>
-          <ul class="border rounded py-3">
-              <li>Dr. M. Senthilmurugan, Director</li>
-              <li>Dr. P. Balasubramanian, Principal</li>
-          </ul>
-      </div>
-
-      <!-- Advisory Committee Members -->
-      <div class="mb-4">
-          <h3 class="text-dark">Advisory Committee Members</h3>
-          <ul class="border rounded py-3">
-              <li>Dr. S. Selvamuthukumar, Vice-Principal, A.V.C. College of Engineering</li>
-              <li>Dr. Saranya Krishnamoorthy, Machine Learning & NLP Senior Advisor, Cigna, Washington DC-Baltimore</li>
-              <li>Dr. Bharathi Raja Chakravarthi, Assistant Professor, University of Galway, Ireland</li>
-              <li>Dr. Vijayakumar Krishnasamy, Professor, IIITDM, Kancheepuram</li>
-              <li>Dr. E. Sivasankar, Associate Professor, NIT, Tiruchirappalli</li>
-              <li>Dr. N. Renugaadevi, Assistant Professor, IIIT, Tiruchirappalli</li>
-              <li>Dr. C. Selvi, Assistant Professor, IIIT, Kottayam</li>
-              <li>Dr. P. Balasubramanian, Assistant Professor, IIIT, Kottayam</li>
-              <li>Dr. G. Pradeep, Associate Professor, SASTRA Deemed University, Thanjavur</li>
-              <li>Dr. T. Ramkumar, Associate Professor, VIT, Vellore</li>
-          </ul>
-      </div>
-
-      <!-- Organizing Committee Members -->
-      <div class="mb-4">
-          <h3 class="text-dark">Organizing Committee Members</h3>
-          <div class="row">
-              <!-- Department of IT -->
-              <div class="col-md-6">
-                  <h5 class="text-success">Department of IT</h5>
-                  <ul class="border rounded py-3">
-                      <li>Dr. R. Kaminozhi, ASP/IT</li>
-                      <li>Dr. V. Padmavathi, ASP/IT</li>
-                      <li>Dr. D. Mahalakshmi, AP/IT</li>
-                      <li>Mrs. V. Ezhilarsasi, AP/IT</li>
-                      <li>Mrs. R. Valarmuruganavathi, AP/IT</li>
-                      <li>Dr. K. Mankandan, AP/IT</li>
-                      <li>Mr. N. P. K. Ganesh Kumar, AP/IT</li>
-                      <li>Mrs. S. Gayathri, AP/IT</li>
-                      <li>Mrs. S. Jeevitha, AP/IT</li>
-                      <li>Mrs. M. Priyadarshini, AP/IT</li>
-                      <li>Ms. P. Akshaya, AP/IT</li>
-                      <li>Ms. R. Harshini, AP/IT</li>
-                      <li>Mr. M. Mohamed Assam, AP/IT</li>
-                      <li>Mrs. N. Suruthi, AP/IT</li>
-                  </ul>
-              </div>
-
-              <!-- Department of CSE -->
-              <div class="col-md-6">
-                  <h5 class="text-success">Department of CSE</h5>
-                  <ul class="border rounded py-3">
-                      <li>Dr. R. Sudha, AP/CSE</li>
-                      <li>Mr. M. Ashokvel, AP/CSE</li>
-                      <li>Mrs. R. Kavitha, AP/CSE</li>
-                      <li>Mrs. M. Kavitha, AP/CSE</li>
-                      <li>Mrs. R. Ravindran, AP/CSE</li>
-                      <li>Mr. J. Madhukarthick, AP/CSE</li>
-                      <li>Mr. A. Vivekanandan, AP/CSE</li>
-                      <li>Mrs. G. Siri Baravi, AP/CSE</li>
-                      <li>Ms. S. Ramapriya, AP/CSE</li>
-                      <li>Ms. D. Mahalakshmi, AP/CSE</li>
-                      <li>Mrs. S. Priyanka, AP/CSE</li>
-                      <li>Ms. N. Hishwarya, AP/CSE</li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-      <hr>
-  </div>
+    <div class="container py-5 mt-5 w3-animate-top" id="Organizing-Committee">
+      <h2 class="text-center text-dark mb-4">Organizing Committee</h2>
+    
+    <div class="row">
+        <div class="col-md-12 text-center box">
+            <h5 class="strong-text">Chief Patron</h5>
+            <p class="strong-text">Justice K. Venkataraman<br><small>Judge Administrator</small></p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12 text-center box">
+            <h5 class="strong-text">Patrons</h5>
+            <p class="strong-text">Dr. M. Senthilmurugan<br><small>Director</small></p>
+            <p class="strong-text">Dr. P. Balasubramanian<br><small>Principal</small></p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12 box">
+            <h5 class="text-center strong-text">Advisory Committee</h5>
+            <ul class="list-unstyled">
+                <li class="strong-text">Dr. S. Selvamuthukumar (Vice-Principal, <strong>AVC College of Engineering</strong>)</li>
+                <li class="strong-text">Dr. Saranya Krishnamoorthy (Senior Advisor, <strong>Cigna, Washington DC-Baltimore</strong>)</li>
+                <li class="strong-text">Dr. Vijayakumar Krishnasamy (Professor, <strong>IITDM, Kancheepuram</strong>)</li>
+                <li class="strong-text">Dr. E. Sivasankar (Associate Professor, <strong>NIT, Tiruchirappalli</strong>)</li>
+                <li class="strong-text">Dr. G. Pradeep (Associate Professor, <strong>SASTRA Deemed University, Thanjavur</strong>)</li>
+                <li class="strong-text">Dr. T. Ramkumar (Professor, <strong>VIT, Vellore</strong>)</li>
+                <li class="strong-text">Dr. Chinnaiyan Ramasubramanian (Pro-Vice Chancellor, <strong>Lingaya’s Vidyapeeth University, Haryana</strong>)</li>
+                <li class="strong-text">Dr. Chithra Selvaraj (Associate Professor, <strong>Anna University, MIT Campus, Chennai</strong>)</li>
+                <li class="strong-text">Dr. J. Bhuvana (Associate Professor, <strong>SSN College of Engineering, Chennai</strong>)</li>
+                <li class="strong-text">Dr. N. Renugadevi (Assistant Professor, <strong>IIIT, Tiruchirappalli</strong>)</li>
+                <li class="strong-text">Dr. C. Selvi (Assistant Professor, <strong>IIIT, Kottayam</strong>)</li>
+                <li class="strong-text">Dr. P. Balasubramanian (Assistant Professor, <strong>IIIT, Kottayam</strong>)</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row d-flex justify-content-around">
+        <div class="col-md-5 box department-box">
+            <h5 class="text-center strong-text">Department of IT</h5>
+            <ul class="list-unstyled">
+                <li class="strong-text">Dr. R. Kanimozhi, ASP</li>
+                <li class="strong-text">Dr. V. Padmavathi, ASP</li>
+                <li class="strong-text">Mrs. D. Mahalakshmi, AP</li>
+                <li class="strong-text">Mrs. V. Ezhilarasi, AP</li>
+                <li class="strong-text">Ms. R. Valampuranayaki, AP</li>
+                <li class="strong-text">Dr. K. Manikandan, AP</li>
+                <li class="strong-text">Mr. N.P.K. Ganeshkumar, AP</li>
+                <li class="strong-text">Mrs. S. Gayathri, AP</li>
+                <li class="strong-text">Mrs. S. Jeevitha, AP</li>
+                <li class="strong-text">Mrs. M. Priyadharshini, AP</li>
+                <li class="strong-text">Ms. P. Akshaya, AP</li>
+                <li class="strong-text">Ms. R. Harshini, AP</li>
+                <li class="strong-text">Mr. M. Mohamed Assam, AP</li>
+                <li class="strong-text">Mrs. N. Shuruthi, AP</li>
+                <li class="strong-text">Ms. B. Bhakyalakshimi, AP</li>
+                <li class="strong-text">Mrs. G. Renuga, AP</li>
+            </ul>
+        </div>
+        <div class="col-md-5 box department-box">
+            <h5 class="text-center strong-text">Department of CSE</h5>
+            <ul class="list-unstyled">
+                <li class="strong-text">Dr. R. Sudha, AP</li>
+                <li class="strong-text">Mr. M. Ashokvel, AP</li>
+                <li class="strong-text">Mrs. R. Ramya, AP</li>
+                <li class="strong-text">Mrs. M. Kavitha, AP</li>
+                <li class="strong-text">Mr. A. Arunpriyan, AP</li>
+                <li class="strong-text">Mr. J. Madhukarthick, AP</li>
+                <li class="strong-text">Mr. A. Vivekanandhan, AP</li>
+                <li class="strong-text">Mrs. G. SriBarkavi, AP</li>
+                <li class="strong-text">Mrs. S. Ramapriya, AP</li>
+                <li class="strong-text">Dr. S. Priyanka, AP</li>
+                <li class="strong-text">Ms. M. Ishwarya, AP</li>
+                <li class="strong-text">Mr. P. Manikandan, AP</li>
+                <li class="strong-text">Mrs. S. Silambarasi, AP</li>
+                <li class="strong-text">Mrs. T. Keerthana, AP</li>
+                <li class="strong-text">Mr. G. Arulkumar, AP</li>
+                <li class="strong-text">Mrs. M. Saranya, AP</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
   <!-- target-audience -->
   <section id="target-audience" style="display: none;" class="w3-animate-top">
@@ -551,7 +669,7 @@
   </section>
 
    <!-- publication details -->
-   <section id="publication" style="display: none;" class="w3-animate-top">
+   <section id="publication" style="display: none;" class="w3-animate-top my-5">
     <h1 class="text-dark mt-5 w3-animate-top">Publication Details</h1>
     <div class="container bg-primary p-5 mb-5 w3-animate-top">
       <p class="text-white" style="font-size: medium; text-align: center">
@@ -564,7 +682,7 @@
 
 
     <!-- Abt-clg -->
-    <section id="Abt-clg" class="w3-animate-top">
+    <section id="Abt-clg" class="w3-animate-top" ">
     <h1 class="text-dark mt-5 w3-animate-top">About the College</h1>
     <div class="container bg-primary p-5 mb-5 w3-animate-top">
       <p class="text-white" style="font-size: medium; text-align: center">
@@ -580,9 +698,24 @@
         while contributing to society.
       </p>
     </div>
-    <hr>
+    
   </section>
 
+
+  <footer class="pt-5 mt-5">
+    <p class="mt-5 lead text-center" style="color: #142b82;">Designed & Created by </p>
+    <button class="animated-button my-3" id="linkedin">
+      <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
+      <span class="text">Karthikrishna</span>
+      <span class="circle"></span>
+      <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+        ></path>
+      </svg>
+    </button>
+  </footer>
 
     
 
@@ -601,6 +734,11 @@
     const targetAudience =document.getElementById("target-audience");
     const publication =document.getElementById("publication");
     const abtClg =document.getElementById("Abt-clg")
+
+    const linkedIn = document.getElementById("linkedin")
+    linkedIn.addEventListener("click", ()=>{
+      setTimeout(()=>{window.location.href = "https://www.linkedin.com/in/karthikrishnaofficial?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}, 800)
+    });
 
 
     
