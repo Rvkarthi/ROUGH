@@ -26,7 +26,7 @@
   flex-direction: column;
   height: 100vh;
   overflow: auto;
-  background-color: #152e8f;
+  /* background-color: #152e8f; */
   /* background-image:url(https://i.pinimg.com/736x/c9/62/eb/c962eb5ee6b116333e8594b70122322d.jpg); */
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -305,13 +305,20 @@
         }
 
         #back{
-          background-color: #ffffff;
           position: fixed !important;
+          background-color: #ffffff;
+          width: 4rem;
+          aspect-ratio: 1;
           bottom: 5%;
           left: 5%;
           z-index: 999;
-          padding: 10px;
-          border-radius: 25px;
+          font-size: 1.5rem;
+          display: flex;
+          justify-content: center;
+          border: 5px solid #0d86ff;
+          filter: drop-shadow(0px 0px 30px #194bffa8);
+          align-items: center;
+          border-radius: 50%;
         }
 
         .popup-overlay {
@@ -397,7 +404,7 @@
       border: 2px solid #0d7aff !important ;
         box-shadow: 5px 5px 12px #00000035;
         filter: drop-shadow(0px 0px 30px #ffffffa8);
-        background-color: #152d8f;
+        background-color: #ffffff;
         border-radius: 15px;
         overflow: hidden;
         padding: 1.5rem;
@@ -437,7 +444,7 @@
           
           <!-- Institution Info -->
           <div  style="border-bottom: 1px solid rgba(128, 128, 128, 0.426);" class="pb-2 pb-md-0">
-            <h5 class="mb-0">A.V.C. College of Engineering</h5>
+            <h5 class="mb-0" style="font-weight: 700;">A.V.C. College of Engineering</h5>
             <p class="small mb-0">
               Approved by AICTE, Affiliated to Anna University,<br>
               Accredited by NAAC with ‘A’ Grade (3rd Cycle), NBA Certified
@@ -449,11 +456,11 @@
     
         <!-- Conference Info -->
         <div class="d-flex mt-1 mx-auto">
-          <img src="https://www.gibsonhospital.org/image/4311/400" alt="ISO Logo" style="height: 80px; max-height: 80px;" class="mt-2 me-2">
+          <img src="https://www.gibsonhospital.org/image/4311/400"  alt="ISO Logo" style="height: 80px; max-height: 80px;" class="mt-2 me-2">
         <div class="text-center d-flex justify-content-center align-items-center wrap" style="flex-direction: column;">
-          <p class="mb-0 text-md-nowrap" >International Conference on Innovative Research</p>
-          <p class="mb-0 text-md-nowrap">in Engineering and Technology (ICIRET-2025)</p>
-          <p class="small mb-0 text-nowrap">28th March 2025</p>
+          <h5 class="mb-0 text-md-nowrap text-dark" style="font-weight: 700;">International Conference on Innovative Research</h5>
+          <h5 class="mb-0 text-md-nowrap text-dark" style="font-weight: 700;">in Engineering and Technology (ICIRET-2025)</h5>
+          <h5 class="mb-0 text-md-nowrap text-primary" style="font-weight: 700; ">28th March 2025</h5>
         </div>
         
         </div>
@@ -559,7 +566,7 @@
 
     <!-- reg -->
     <div class="container countdown-container my-5" id="reg-endin">
-      <h1 class="countdown-header text-white">Register Ends In</h1>
+      <h1 class="countdown-header text-dark">Register Ends In</h1>
       <div class="row justify-content-center">
         <div class="col-2 countdown-box">
           <div class="countdown-time" id="days">00</div>
@@ -580,10 +587,10 @@
       </div>
       
       
-          <p class="mt-2 text-white">For Students - ₹600</p>
-          <p class="text-white">Faculty members - ₹750</p>
-          <p class="text-white">industry Persons - ₹1000</p>
-          <p class="text-white">A team comprises of 3 authors. For each additional author, an extra fee of Rs. 200 will be charged</p>
+          <p class="mt-2 text-dark">For Students - ₹600</p>
+          <p class="text-dark">Faculty members - ₹750</p>
+          <p class="text-dark">industry Persons - ₹1000</p>
+          <p class="text-dark">A team comprises of 3 authors. For each additional author, an extra fee of Rs. 200 will be charged</p>
      
 
       <a href="https://forms.gle/Zvq7zqRwu6Tcv5hS7" class="mt-4 btn border rounded rounded-5 border-primary" id="reg-now">Register now -></a>
@@ -594,10 +601,10 @@
 
     <!--  conference  -->
     <section id="conference" class="w3-animate-top">
-    <h1 class="text-white mt-5" >About the Conference</h1>
+    <h1 class="text-dark mt-5" >About the Conference</h1>
     <div class="container bg-primary p-5 mb-5">
       <p class="text-white" style="font-size: medium; text-align: center">
-        IClRET-2025, the One-Day International Conference on Innovative Research in Engineering and Technology, is dedicated to fostering collaboration and knowledge exchange among faculty members, researchers, industry experts, and students. This conference highlights cutting-edge advancements, explores emerging trends, and showcases innovative methodologies and technological breakthroughs across various engineering domains. IClRET-2025 offers the flexibility of both in-person and virtual participation (hybrid mode - for other states and countries), with a special emphasis on encouraging international delegates to participate virtually. This inclusive format ensures global collaboration, promotes the exchange of diverse perspectives, and contributes significantly to the advancement of engineering research and its societal impact.
+        ICIRET-2025, the One-Day International Conference on Innovative Research in Engine Engineering and Technology, fostering collaboration and knowledge exchange among faculty members, researchers, industry experts, and students. This conferance highlights cutting-edge advancements, explores emerging trends, and showcases innovative methodologies and technological breakthroughs across various engineering domains. ICIRET-2025 offers the flexibility of both in person and virtual participation (hybrid mode-Other States and and Countries), with a special emphasis on encouraging international delegates to participate virtually. This inclusive format ensures global collaboration, promotes the exchange of diverse perspectives, and contributes significantly to the advancement of engineering research and its societal impact.
       </p>
     </div>
     <hr />
@@ -607,7 +614,7 @@
 
     <!-- imp-dates -->
     <section id="imp-dates" class="w3-animate-top">
-    <h1 class="text-white mt-5" >Important Dates</h1>
+    <h1 class="text-dark mt-5" >Important Dates</h1>
     <div class="container mb-5">
       <div class="row justify-content-center">
         <div class="card col-11 m-3 col-md-5 justify-content-center ">
@@ -686,7 +693,7 @@
 
     <!-- call-for-paper -->
     <section id="call-for-paper" class="w3-animate-top">
-    <h1 class="text-white mt-5">Conference Tracks</h1>
+    <h1 class="text-dark mt-5">Conference Tracks</h1>
     <div class="container bg-primary py-5 mb-5 d-flex align-items-center justify-content-center" style="flex-direction: column;">
       <div>
         <ul class="list-group list-group-horizontal">
@@ -716,16 +723,16 @@
 
     <!-- contact -->
     <section id="contact">
-    <h1 class="text-white mt-5">Contact</h1>
+    <h1 class="text-dark mt-5">Contact</h1>
     <div class="container mb-5">
       <!-- Contact Section -->
       <div class="mb-3">
-        <p class="fw-bold text-white ">
+        <p class="fw-bold text-dark ">
           Send your full paper to 
           <a href="mailto:iciret2025@avccengg.net" class="text-primary">iciret2025@avccengg.net</a>, Paper Template: 
           <a href="">IEEE FORMAT</a>
         </p>
-        <p class="text-white">
+        <p class="text-dark">
           Website: 
           <a href="http://www.avccengg.net/iciret2025.html" target="_blank" class="text-danger">www.avccengg.net/iciret2025.html</a>
         </p>
@@ -733,7 +740,7 @@
   
       <!-- Table Section -->
       <div class="card">
-        <div class="card-header bg-primary text-white fw-bold text-white">CONTACT</div>
+        <div class="card-header bg-primary text-dark fw-bold text-white">CONTACT</div>
         <div class="table-responsive">
           <table class="table table-bordered table-striped">
             <thead class="table-light">
@@ -771,7 +778,7 @@
 
     <!-- Organizing Committee -->
     <div class="container py-5 mt-5" id="Organizing-Committee">
-      <h2 class="text-center text-white mb-4">Organizing Committee</h2>
+      <h2 class="text-center text-dark mb-4">Organizing Committee</h2>
     
     <div class="row">
         <div class="col-md-12 text-center box">
@@ -807,6 +814,41 @@
             </ul>
         </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-12 box">
+          <!-- <h5 class="text-center strong-text">Conveners</h5> -->
+          <table class="table table-bordered table-striped">
+            <thead class="table-light">
+              <tr>
+                <th>Role & Name & Designation</th>
+                <th >Contact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="mx-auto">
+                <td> <b>Convener:</b>  <br>Dr.&nbsp;K.&nbsp;Krishnakumari <br>HoD-IT</td>
+                <td>9894952576</td>
+              </tr>
+              <tr class="mx-auto">
+                <td> <b>Convener:</b>  <br>Dr.&nbsp;S.&nbsp;Padmapriya <br>HoD-CSE</td>
+                <td>9786446007</td>
+              </tr>
+              <tr class="mx-auto">
+                <td> <b>Coordinator:</b>  <br>Dr.&nbsp;K.&nbsp;Aruna <br>AP-IT</td>
+                <td>8870827031</td>
+              </tr>
+              <tr class="mx-auto">
+                <td> <b>Coordinator:</b> <br> Dr.&nbsp;J.&nbsp;Sudha <br>ASP-CSE</td>
+                <td>9487442220</td>
+              </tr>
+            </tbody>
+          </table>
+              
+              
+          
+      </div>
+  </div>
     
     <div class="row d-flex justify-content-around">
         <div class="col-md-5 box department-box">
@@ -824,7 +866,7 @@
                 <li class="strong-text">Mrs. M. Priyadharshini, AP</li>
                 <li class="strong-text">Ms. P. Akshaya, AP</li>
                 <li class="strong-text">Ms. R. Harshini, AP</li>
-                <li class="strong-text">Mr. M. Mohamed Assam, AP</li>
+                <li class="strong-text">Mr. M.A. Mohamed Assam, AP</li>
                 <li class="strong-text">Mrs. N. Shuruthi, AP</li>
                 <li class="strong-text">Ms. B. Bhakyalakshimi, AP</li>
                 <li class="strong-text">Mrs. G. Renuga, AP</li>
@@ -856,9 +898,9 @@
 
   <!-- target-audience -->
   <section id="target-audience" style="display: none;" class="w3-animate-top">
-    <h1 class="text-white mt-5 w3-animate-top">Target Audience</h1>
+    <h1 class="text-dark mt-5 w3-animate-top">Target Audience</h1>
     <div class="container bg-primary p-5 mb-5 w3-animate-top">
-      <p class="text-white" style="font-size: medium; text-align: center">
+      <p class="text-dark" style="font-size: medium; text-align: center">
         This conference is designed to engage academic and professional communities, including  undergraduate/postgraduate students,fostering knowledge sharing in innovative research domains.
       </p>
     </div>
@@ -867,7 +909,7 @@
 
    <!-- publication details -->
    <section id="publication" style="display: none;" class="w3-animate-top my-5">
-    <h1 class="text-white mt-5 w3-animate-top">Publication Details</h1>
+    <h1 class="text-dark mt-5 w3-animate-top">Publication Details</h1>
     <div class="container bg-primary p-5 mb-5 w3-animate-top">
       <p class="text-white" style="font-size: medium; text-align: center">
         Selected papers will be published in the conference proceedings with an ISBN and published in a UGC-approved journal with additional charge.
@@ -880,19 +922,10 @@
 
     <!-- Abt-clg -->
     <section id="Abt-clg" class="w3-animate-top" >
-    <h1 class="text-white mt-5 w3-animate-top">About the College</h1>
+    <h1 class="text-dark mt-5 w3-animate-top">About the College</h1>
     <div class="container bg-primary p-5 mb-5 w3-animate-top">
       <p class="text-white" style="font-size: medium; text-align: center">
-        A.V.C. College of Engineering, established in 1996, is located on the
-        main highway from Mayiladuthurai to Thirukkadaiyur in the scenic
-        landscape of Mannampandal, Mayiladuthurai District, Tamil Nadu, spread
-        across 30.09 acres. The institution offers eight UG and PG programmes in
-        Engineering & Technology, MBA and MCA. It is accredited by NBA for the
-        MECH, ECE, CSE and EEE programs. Additionally, it is re-accredited by
-        NAAC with an 'A' Grade (3rd Cycle). Renowned for its commitment to
-        academic excellence and holistic development, the institution continues
-        to produce competent professionals equipped to meet global challenges
-        while contributing to society.
+        A.V.C. College of Engineering, established in 1996, is located on the main highway from Mayiladuthurai to Thirukkadaiyur in the scenic landscape of Mannampandal, Mayiladuthurai District, Tamilnadu, spread across 30.09 acres. The institution offers eight UG and two PG programmes. It is Accredited by NBA for the MECH, ECE, CSE and EEE programmes. Additionally, it is Accredited by NAAC with an 'A' Grade (3 Cycle). Renowned for its commitment to academic excellence and holistic development, the institution continues to produce competent professionals equipped to meet global challenges while contributing to society
       </p>
     </div>
     
@@ -900,7 +933,7 @@
 
 
   <footer class="py-5 mt-5 ">
-    <p class="lead text-center text-white my-auto m-1" style="color: #142b82; font-size: small;">Designed & Created by </p>
+    <p class="lead text-center text-dark my-auto m-1" style="color: #142b82; font-size: small;">Designed & Created by </p>
     <button class="animated-button m-1" id="linkedin">
       <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
         <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
