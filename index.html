@@ -681,7 +681,7 @@
       </div>
   
       <!-- Table Section -->
-      <div class="col-8 mx-auto">
+      <div class="col-md-8 col-12 mx-auto">
         <div class="card">
           <div class="card-header bg-primary text-white fw-bold p-2 text-center">CONTACT</div>
           <div class="table-responsive">
@@ -729,7 +729,7 @@
     </div>
     <hr>
     
-    <h2 class="text-dark text-center">location</h2>
+    <h2 class="text-dark text-center">Reach us</h2>
     <div class="d-flex justify-content-center my-5"><iframe style="border: 5px solid #ffffff; filter:drop-shadow(0px 0px 15px  #0d7aff); border-radius: 15px;" class="mx-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.147735169051!2d79.69147197504657!3d11.102365289066952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5521090b9622ed%3A0xd95a8f5c165bb425!2sA%20V%20C%20COLLLEGE%20OF%20ENGINEERING!5e0!3m2!1sen!2sin!4v1738760344362!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
@@ -1316,6 +1316,22 @@
           .forEach((el) => (el.textContent = "00"));
       }
     }
+
+
+    // Select all buttons on the page
+const buttons = document.querySelectorAll('button');
+
+// Create an Audio object for the click sound
+const clickSound = new Audio('click.mp3');
+
+// Add event listeners to all buttons
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    clickSound.play(); // Play the click sound
+    console.log(`${button.textContent} clicked!`); // Log which button was clicked
+  });
+});
+
 
     // Set your target date here
     const targetDate = "2025-03-03T00:00:00";
